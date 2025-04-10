@@ -1,2 +1,1 @@
-# zimax
-zimax networks
+# zimaxqa
