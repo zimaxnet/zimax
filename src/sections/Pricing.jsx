@@ -18,7 +18,7 @@ const Pricing = () => {
 
             </h3>
             <p className="body-1 max-lg:max-w-2xl mx-auto text-center text-p4 max-md:mb-14 max-md:max-w-sm ">
-            Voltage pricing is designed without entry barriers. Get instant access to the entire Voltage platform and scale as you build.
+            Zimax pricing is designed without entry barriers. Get instant access to the entire Zimax platform and scale as you build.
             </p>
 
             
