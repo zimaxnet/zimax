@@ -3,6 +3,10 @@ import { z } from 'zod';
 import { sendContactEmail } from '@/lib/email';
 import { checkRateLimit } from '@/lib/rate-limit';
 
+// Note: This API route will not work with static export
+// For Azure Static Web Apps, convert to Azure Function or use alternative service
+export const dynamic = 'force-dynamic';
+
 const contactSchema = z.object({
   name: z.string().min(1).max(100),
   email: z.string().email().max(255),
