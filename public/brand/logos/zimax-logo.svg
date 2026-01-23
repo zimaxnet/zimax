@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="zimaxGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a8e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Z shape with modern design -->
+  <path d="M 10 10 L 50 10 L 10 50 L 50 50" stroke="url(#zimaxGradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 10 30 L 50 30" stroke="url(#zimaxGradient)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="60" y="25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#0066cc">Zimax</text>
+  <text x="60" y="45" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Networks</text>
+</svg>
