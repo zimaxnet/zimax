@@ -19,28 +19,26 @@ export default function ContactPage() {
     setStatus('submitting');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      // For static export, we'll use a client-side form service
+      // TODO: Replace with Azure Function endpoint or third-party service
+      // For now, use mailto as fallback
+      const mailtoLink = `mailto:info@zimax.net?subject=Contact Form: ${formData.interest}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0AOrganization: ${formData.organization || 'N/A'}%0ARole: ${formData.role || 'N/A'}%0AInterest: ${formData.interest}%0A%0AMessage:%0A${formData.message}`;
+      
+      // In production, replace with actual API endpoint (Azure Function)
+      // const response = await fetch('https://your-function.azurewebsites.net/api/contact', { ... });
+      
+      // For now, show success and open mailto
+      window.location.href = mailtoLink;
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        organization: '',
+        role: '',
+        interest: '',
+        message: '',
+        consent: false,
       });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          organization: '',
-          role: '',
-          interest: '',
-          message: '',
-          consent: false,
-        });
-      } else {
-        setStatus('error');
-      }
     } catch (error) {
       setStatus('error');
     }

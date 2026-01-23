@@ -1,11 +1,11 @@
+// Backup of contact API route
+// This was moved out of app/api/ for static export compatibility
+// To use: Convert to Azure Function or use alternative service
+
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { sendContactEmail } from '@/lib/email';
 import { checkRateLimit } from '@/lib/rate-limit';
-
-// Note: This API route will not work with static export
-// For Azure Static Web Apps, convert to Azure Function or use alternative service
-export const dynamic = 'force-dynamic';
 
 const contactSchema = z.object({
   name: z.string().min(1).max(100),
@@ -58,10 +58,7 @@ export async function POST(request: NextRequest) {
       try {
         await sendContactEmail(data);
       } catch (emailError) {
-        // Log error but don't fail the request
-        // In production, you might want to queue this for retry
         console.error('Email sending failed:', emailError);
-        // Still log to console for now
         console.log('Contact form submission (email failed):', {
           name: data.name,
           email: data.email,
@@ -73,7 +70,6 @@ export async function POST(request: NextRequest) {
         });
       }
     } else {
-      // Fallback: just log if email service not configured
       console.log('Contact form submission (no email service configured):', {
         name: data.name,
         email: data.email,
@@ -84,11 +80,6 @@ export async function POST(request: NextRequest) {
         timestamp: new Date().toISOString(),
       });
     }
-
-    // TODO: Store in database if DATABASE_URL is configured
-    // if (process.env.DATABASE_URL) {
-    //   await storeSubmission(data);
-    // }
 
     return NextResponse.json(
       { message: 'Message received successfully' },
