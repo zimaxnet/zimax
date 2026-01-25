@@ -7,8 +7,8 @@ param location string = resourceGroup().location
 @description('SKU for the Static Web App')
 param sku string = 'Free' // Options: Free, Standard
 
-@description('GitHub repository URL (optional)')
-param repositoryUrl string = ''
+@description('GitHub repository URL (required by ARM for SWA)')
+param repositoryUrl string = 'https://github.com/zimaxnet/zimax'
 
 @description('GitHub branch name')
 param branch string = 'main'
@@ -52,14 +52,9 @@ resource staticWebApp 'Microsoft.Web/staticSites@2022-03-01' = {
   }
 }
 
-// Custom domain configuration (zimax.net)
-resource customDomain 'Microsoft.Web/staticSites/customDomains@2022-03-01' = {
-  parent: staticWebApp
-  name: 'zimax.net'
-  properties: {
-    validationMethod: 'dns-txt-token'
-  }
-}
+// Custom domain (zimax.net) is added after deploy via Portal:
+// Custom domains → Add → "Custom domain on Azure DNS" → select zone zimax.net.
+// That creates TXT/ALIAS in Azure DNS and provisions the free SSL automatically.
 
 // Outputs
 output staticWebAppName string = staticWebApp.name
