@@ -15,7 +15,8 @@ export default function CompanyPage() {
               Company
             </h1>
             <p className="text-xl text-gray-600">
-              Building transparent governance for enterprise agent ecosystems
+              An inferencing company in Phoenix, Arizona — built with partners who asked
+              us to prove it
             </p>
           </div>
         </div>
@@ -27,10 +28,21 @@ export default function CompanyPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">About Us</h2>
               <p className="text-lg text-gray-600 mb-4">
-                Zimax Networks LC is focused on solving the security and governance challenges that enterprises face when adopting agent ecosystems and MCP (Model Context Protocol) integrations.
+                Zimax Networks LC is an inferencing company incorporated in Phoenix,
+                Arizona. We operate managed, private AI inference on Microsoft Azure —
+                tiered model routing, a truth-value retrieval layer, and tenant
+                isolation enforced by policy on every request — for organizations whose
+                prompts and documents are competitive assets.
               </p>
               <p className="text-lg text-gray-600 mb-4">
-                We believe that transparency, evidence-based assessment, and clear policy enforcement are essential for safe adoption of these powerful technologies. Our products—SecAI Radar, ctxeco, and openContextGraph—work together to provide a complete governance and runtime control solution.
+                We are built with the support of friends and partners who committed
+                time, talent, and treasure — and who held us to one standard:
+                prove it. That standard shaped the company. Our platform classifies
+                every document by how much it deserves to be trusted, and we publish
+                our own operational evidence the same way: measured restore times,
+                adversarially-verified immutable backups, and test suites run against
+                both live regions. Our products — ctxEco, SecAI Radar, and
+                openContextGraph — all ride on that foundation.
               </p>
               <p className="text-lg text-gray-600">
                 Learn more about our{' '}

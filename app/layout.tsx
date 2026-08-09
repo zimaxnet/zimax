@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Zimax Networks LC | Transparent Governance for Enterprise Agent Ecosystems",
-  description: "Security posture scoring, evidence-based verification, and managed MCP integration—built for the real world.",
-  keywords: ["enterprise security", "MCP", "agent governance", "security posture", "SecAI Radar", "ctxeco"],
+  title: "Zimax Networks LC | Private AI Inference, Proven",
+  description: "Managed private AI inference on Azure: tiered routing, truth-value retrieval, policy-enforced tenant isolation. Every claim backed by a versioned artifact.",
+  keywords: ["AI inference", "private inference", "managed inference", "Azure AI Foundry", "truth-value RAG", "tenant isolation", "ctxeco", "Zimax"],
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },

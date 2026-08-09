@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
+    '/platform',
+    '/evidence',
     '/products',
     '/products/secai-radar',
     '/products/ctxeco',

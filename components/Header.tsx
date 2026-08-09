@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function Header() {
   const navItems = [
+    { href: '/platform', label: 'Platform' },
     { href: '/products', label: 'Products' },
-    { href: '/solutions', label: 'Solutions' },
-    { href: '/resources', label: 'Resources' },
+    { href: '/evidence', label: 'Evidence' },
     { href: '/security', label: 'Security' },
     { href: '/company', label: 'Company' },
     { href: '/contact', label: 'Contact' },
