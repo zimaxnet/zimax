@@ -19,7 +19,7 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { href: '#', label: 'LinkedIn', icon: 'linkedin' },
+    { href: 'https://www.linkedin.com/company/zimax-networks', label: 'LinkedIn', icon: 'linkedin' },
     { href: '#', label: 'X (Twitter)', icon: 'twitter' },
     { href: 'https://github.com/derekbmoore/openContextGraph', label: 'GitHub', icon: 'github' },
   ];
@@ -113,7 +113,7 @@ export default function Footer() {
               <li className="flex items-center space-x-4 mt-4">
                 {socialLinks.map((link) => (
                   <a
-                    key={link.href}
+                    key={link.label}
                     href={link.href}
                     target={link.href.startsWith('http') ? '_blank' : undefined}
                     rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
